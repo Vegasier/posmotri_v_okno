@@ -63,7 +63,7 @@ fieldset {
   margin-block-end: 26px;
 }
 
-.content__accent:first-child {
+.content__accent {
   color: #545050;
 }
 
@@ -75,24 +75,18 @@ fieldset {
 
 .content__list {
   position: relative;
-  inline-size: 394px;
+  min-inline-size: 394px;
   block-size: 298px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 .content__list-item {
   inline-size: 394px;
-  block-size: 107px;
+  min-block-size: 107px;
 }
 
 .content__list-item:not(:last-child) {
   margin-block-end: 30px;
-}
-
-.content__list-item:hover {
-  text-decoration: underline;
-  text-underline-offset: 6px;
 }
 
 .content__video-card {
@@ -103,6 +97,8 @@ fieldset {
 .content__video-card-thumbnail {
   max-inline-size: 194px;
   max-block-size: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__card-link {
@@ -110,6 +106,11 @@ fieldset {
   text-decoration: none;
   color: white;
   margin: 2px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 .content__card-link_current {
@@ -129,14 +130,16 @@ fieldset {
 }
 
 .content__video-card-description-container {
-  padding-top: 2px;
   padding-left: 2px;
 }
 
 .content__video-card-title {
+  max-inline-size: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 30px;
   font-weight: 700;
-  line-height: 30px;
   font-family: Oswald, sans-serif;
   text-transform: uppercase;
 }
@@ -144,8 +147,6 @@ fieldset {
 .content__video-card-description {
   font-size: 18px;
   font-weight: 400;
-  line-height: 16px;
-  padding-top: 6px;
 }
 
 .result__video-container {
@@ -182,8 +183,8 @@ fieldset {
   background-color: transparent;
   color: white;
   border: none;
-  border-block-start: 1px solid white;
-  border-block-end: 1px solid white;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
   outline: none;
   appearance: none;
 }
@@ -250,6 +251,7 @@ button {
   font-family: inherit;
   text-align: center;
   border: 1px solid white;
+  text-underline-offset: 3px;
 }
 
 button:active {
