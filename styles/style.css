@@ -144,10 +144,6 @@ fieldset {
   text-transform: uppercase;
 }
 
-.content__video-card-description {
-  font-size: inherit;
-}
-
 .result__video-container {
   position: relative;
   inline-size: 711px;
@@ -190,7 +186,7 @@ fieldset {
 
 .search-form__textfield:active {
   outline: 1px solid white;
-  outline-offset: 0px;
+  outline-offset: 0;
 }
 
 .search-form__label {
